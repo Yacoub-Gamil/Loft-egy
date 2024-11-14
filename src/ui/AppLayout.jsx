@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 
 function AppLayout() {
@@ -6,7 +7,9 @@ function AppLayout() {
       <div>
         <Header />
       </div>
-      <div className="container m-auto">childern</div>
+      <div className=" container m-auto">
+        <Outlet />
+      </div>
     </>
   );
 }

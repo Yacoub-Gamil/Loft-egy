@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  border-bottom: solid 2px;
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+body {
+  background-color: #f1f5f9;
+}

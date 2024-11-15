@@ -1,7 +1,5 @@
 import HeroSection from "../components/HeroSection";
 import ImagesHome from "../components/ImagesHome";
-import TitiCard from "../components/TitiCard";
-
 function Home() {
   return (
     <div className=" container ">
@@ -15,7 +13,7 @@ function Home() {
       <div className=" mb-[2rem]">
         <ImagesHome />
       </div>
-      <TitiCard />
+      {/* <TitiCard /> */}
     </div>
   );
 }

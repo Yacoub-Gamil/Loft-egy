@@ -1,13 +1,8 @@
-import { Link } from "react-router-dom";
-
-function Button({ to, children }) {
+function Button() {
   return (
-    <Link
-      className=" px-4 py-2  border-b text-white uppercase duration-300 text-[.8rem] text-center tracking-[.1rem]  hover:rounded-full font-bold hover:text-black hover:bg-white"
-      to={to}
-    >
-      {children}
-    </Link>
+    <button className=" text-[.8rem] font-semibold hover:bg-black bg-white hover:text-white duration-300 uppercase px-[2rem] py-[.5rem] rounded-full shadow-[0px_0px_10px_5px_#d5d5d7]">
+      Discover more
+    </button>
   );
 }
 

@@ -11,6 +11,9 @@ export default {
         xl: "1140px",
         xxl: "1320px",
       },
+      fontFamily: {
+        sevillana: ["Sevillana"],
+      },
     },
   },
   plugins: [],

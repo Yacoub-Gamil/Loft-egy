@@ -9,8 +9,8 @@ function AppLayout() {
 
       <div className=" container m-auto">
         <Outlet />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }

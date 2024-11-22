@@ -3,7 +3,7 @@ import { MdOutlineEmail } from "react-icons/md";
 
 function Footer() {
   return (
-    <div className="  border-t mt-[4rem] grid grid-cols-3 items-center text-[#52525b] bg-slate-200 ">
+    <div className="  border-t mt-[4rem] grid grid-cols-3 items-center text-[#52525b] bg-white">
       <div className=" flex justify-center">
         <img className=" w-[12rem]" src="loft/loft-logo.png" alt="" />
       </div>

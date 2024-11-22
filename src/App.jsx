@@ -2,9 +2,9 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Services from "./pages/Services";
-import OurGallery from "./pages/OurGallery";
+import Contact from "./pages/Contact";
 import SpotlightAndMore from "./pages/SpotlightAndMore";
+import Spotlight from "./pages/Spotlight";
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/spotlightAndMore" element={<SpotlightAndMore />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/ourGallery" element={<OurGallery />} />
+          <Route path="/spotlight" element={<Spotlight />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>

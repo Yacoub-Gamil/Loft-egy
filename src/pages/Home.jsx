@@ -1,9 +1,10 @@
 import { useGSAP } from "@gsap/react";
-
 import gsap from "gsap";
 import HeroSlider from "../components/HeroSlider";
 import CardItem from "../components/CardItem";
 import ThonetCollection from "../components/ThonetCollection";
+import Lamps from "../components/Lamps";
+
 function Home() {
   useGSAP(() => {
     gsap.fromTo(
@@ -43,39 +44,42 @@ function Home() {
           price="52"
         />
         <CardItem
-          title="she"
-          image="she.jpg"
+          title="bookshelf"
+          image="bookshelf.jpg"
           info="helods from the daybed in our gallery"
           price="52"
         />
         <CardItem
-          title="daybed"
+          title="Paino"
           image="paino.jpg"
           info="helods from the daybed in our gallery"
           price="52"
         />
       </div>
+
       <ThonetCollection />
+
       <div className=" mx-[1rem] gap-[4rem] grid grid-cols-3 mt-[-8rem]">
         <CardItem
-          title="daybed"
+          title="mirrors"
           image="mirror.jpg"
           info="helods from the daybed in our gallery"
           price="52"
         />
         <CardItem
-          title="daybed"
-          image="chr.jpg"
+          title="chairs"
+          image="chair.jpg"
           info="helods from the daybed in our gallery"
           price="52"
         />
         <CardItem
-          title="daybed"
+          title="trays"
           image="trays/t-2.jpg"
           info="helods from the daybed in our gallery"
           price="52"
         />
       </div>
+      <Lamps />
     </div>
   );
 }

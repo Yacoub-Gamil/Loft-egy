@@ -50,8 +50,8 @@ function Home() {
           price="52"
         />
         <CardItem
-          title="Paino"
-          image="paino.jpg"
+          title="trays"
+          image="trays/t-2.jpg"
           info="helods from the daybed in our gallery"
           price="52"
         />
@@ -59,7 +59,7 @@ function Home() {
 
       <ThonetCollection />
 
-      <div className=" mx-[1rem] gap-[4rem] grid grid-cols-3 mt-[-8rem]">
+      <div className="  gap-[6rem] w-[90rem] mx-auto grid grid-cols-2 mt-[-6rem]">
         <CardItem
           title="mirrors"
           image="mirror.jpg"
@@ -69,12 +69,6 @@ function Home() {
         <CardItem
           title="chairs"
           image="chair.jpg"
-          info="helods from the daybed in our gallery"
-          price="52"
-        />
-        <CardItem
-          title="trays"
-          image="trays/t-2.jpg"
           info="helods from the daybed in our gallery"
           price="52"
         />

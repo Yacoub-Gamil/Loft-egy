@@ -1,5 +1,4 @@
 import { useGSAP } from "@gsap/react";
-import Button from "./Button";
 import gsap from "gsap";
 
 function PianoCard() {
@@ -14,9 +13,9 @@ function PianoCard() {
     <div id="pianoCard">
       <div className=" p-6 relative ">
         <div className=" w-[60rem]">
-          <h1 className=" font-sevillana text-[4rem] underline">
-            <span className=" text-[#dc2626]">Spotlight</span>{" "}
-            <strong> The piano</strong>
+          <h1 className=" font-serif text-[3rem] ">
+            <span className=" text-[#dc2626]">1.Spotlight</span>{" "}
+            <span className=" italic">Erard Piano</span>
           </h1>
           <p className=" mx-[2rem] text-[1.6rem] mt-[2rem] font-serif">
             The Loft is exhibiting an exceptional 19th century piano by the
@@ -39,14 +38,14 @@ function PianoCard() {
                 musicians (Chopin and Liszt). Franz Liszt is said to have played
                 a six-octave Érard piano in Paris in 1824.
               </p>
-              <div className="">
-                <Button
-                  target
-                  to="https://en.wikipedia.org/wiki/S%C3%A9bastien_%C3%89rard"
-                >
-                  learn more about erard
-                </Button>
-              </div>
+
+              <a
+                className=" border w-[22rem] text-center uppercase px-2 py-3 hover:bg-black hover:text-white duration-300"
+                target="blank"
+                href="https://en.wikipedia.org/wiki/S%C3%A9bastien_%C3%89rard"
+              >
+                learn more about erard
+              </a>
             </div>
           </div>
         </div>
@@ -56,6 +55,7 @@ function PianoCard() {
             src="piano.jpg"
             alt=""
           />
+          <h1 className=" text-center font-serif mt-[0.5rem]">Erard Piano</h1>
         </div>
       </div>
     </div>

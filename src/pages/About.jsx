@@ -37,11 +37,11 @@ function About() {
           </p>
         </div>
         <div className=" w-full rounded-sm grid grid-cols-3  mt-[2.2rem] p-2 place-content-center gap-[2px]">
-          <img className="" src="loft/bg-1.jpg" alt="" />
-          <img className="" src="loft/bg-2.jpg" alt="" />
-          <img className="" src="loft/bg-3.jpg" alt="" />
-          <img className="" src="loft/bg-4.jpg" alt="" />
-          <img className="" src="loft/bg-5.jpg" alt="" />
+          <img  src="loft/bg-1.jpg" alt="" />
+          <img  src="loft/bg-2.jpg" alt="" />
+          <img  src="loft/bg-3.jpg" alt="" />
+          <img  src="loft/bg-4.jpg" alt="" />
+          <img  src="loft/bg-5.jpg" alt="" />
           <img className=" h-full" src="loft/bg-6.jpg" alt="" />
         </div>
       </div>

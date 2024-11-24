@@ -26,8 +26,8 @@ function Footer() {
           </div>
         </div>
         <div className=" flex gap-6 justify-center mt-[1rem]">
-          <h1>(+02) 121-095-5561</h1>
-          -<FaWhatsapp className=" text-[1.4rem]" />-<h1>(+02) 121-095-5561</h1>
+          <h1>(+02) 121 095 5561</h1>
+          -<FaWhatsapp className=" text-[1.4rem]" />-<h1>(+02) 122 2276 680</h1>
         </div>
       </div>
       <div className=" flex justify-center">

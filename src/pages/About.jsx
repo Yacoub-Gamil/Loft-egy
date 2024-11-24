@@ -1,13 +1,22 @@
+import { useGSAP } from "@gsap/react";
 import OurTeam from "../components/OurTeam";
 import TitiCard from "../components/TitiCard";
+import gsap from "gsap";
 
 function About() {
+  useGSAP(() => {
+    gsap.fromTo(
+      "#aboutUs",
+      { opacity: 0, y: -5 },
+      { opacity: 1, y: 0, duration: 1 }
+    );
+  }, []);
   return (
-    <div>
+    <div id="aboutUs">
       {/* 1 */}
       <div className=" w-full flex mb-[2rem] font-serif">
         <div className="w-full">
-          <h1 className=" font-bold text-[2rem] mb-[1.4rem]">
+          <h1 className=" font-bold text-[2rem]  mb-[1.4rem] text-[#52525b]">
             The loft gallery
           </h1>
           <p className=" text-[1.2rem] mx-[2rem]">
@@ -46,7 +55,9 @@ function About() {
           />
         </div>
         <div className=" w-full font-serif">
-          <h1 className=" font-bold text-[2rem] mb-[1.4rem] ">Hani Gamil</h1>
+          <h1 className=" font-bold text-[2rem] mb-[1.4rem] text-[#52525b] ">
+            Hani Gamil
+          </h1>
           <p className=" text-[1.2rem] mx-[2rem]">
             The owner, Hani Gamil, is a young decorator originating from Upper
             Egypt. He is a &quot;self-made&quot; man who learnt his trade

@@ -8,20 +8,31 @@ import Lamps from "../components/Lamps";
 function Home() {
   useGSAP(() => {
     gsap.fromTo(
-      "logo",
+      "#logo",
       {
         opacity: 0,
+        y: -50,
       },
       {
         opacity: 1,
-
-        delay: 2.5,
-        duration: 2,
+        y: 0,
+        delay: 1.4,
+        duration: 1,
+      }
+    );
+    gsap.fromTo(
+      "#slider",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
       }
     );
   }, []);
+
   return (
-    <div className=" container">
+    <div className="container">
       <div className="relative z-20">
         <div
           id="logo"
@@ -33,10 +44,13 @@ function Home() {
             alt=""
           />
         </div>
-        <div className=" bg-black"></div>
-        <HeroSlider />
+
+        <div id="slider">
+          <HeroSlider />
+        </div>
       </div>
-      <div className=" w-full mx-[1rem] gap-[4rem] grid grid-cols-3 mt-[-10rem]">
+
+      <div className=" w-full mx-auto gap-[4rem] grid grid-cols-3 mt-[-10rem]">
         <CardItem
           title="daybed"
           image="daybed.jpg"
@@ -46,7 +60,7 @@ function Home() {
         <CardItem
           title="bookshelf"
           image="bookshelf.jpg"
-          info="helods from the daybed in our gallery"
+          info="helods from the daybed in our gallery "
           price="52"
         />
         <CardItem

@@ -38,7 +38,9 @@ function Lamps() {
         ))}
       </div>
       <div className=" flex justify-center m-[3rem]">
-        <Button />
+        <Button >
+          discover more
+        </Button>
       </div>
       {/* end */}
 
@@ -55,7 +57,9 @@ function Lamps() {
         ))}
       </div>
       <div className=" flex justify-center m-[3rem]">
-        <Button />
+        <Button >
+          discover more
+        </Button>
       </div>
 
       {/* end  */}

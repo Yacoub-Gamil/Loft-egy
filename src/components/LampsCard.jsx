@@ -19,14 +19,14 @@ const egyptionLamps = [
   "lamps/egyption/06-.png",
 ];
 
-function Lamps() {
+function LampsCard() {
   return (
     <div className=" flex flex-col items-center mt-[6rem]">
       <h1 className=" mb-[2rem] font-sevillana tracking-wide text-[3rem] italic text-[#52525b] font-semibold border-b">
         Our production lamps
       </h1>
       {/* start */}
-      <div className=" grid grid-cols-7 justify-center place-items-center ">
+      <div className=" grid grid-cols-7 justify-center place-items-center mb-[5rem] ">
         {pipeLamps.map((img) => (
           <div key={img}>
             <img
@@ -37,11 +37,7 @@ function Lamps() {
           </div>
         ))}
       </div>
-      <div className=" flex justify-center m-[3rem]">
-        <Button >
-          discover more
-        </Button>
-      </div>
+
       {/* end */}
 
       {/* start */}
@@ -57,9 +53,7 @@ function Lamps() {
         ))}
       </div>
       <div className=" flex justify-center m-[3rem]">
-        <Button >
-          discover more
-        </Button>
+        <Button to="/lamps">discover more</Button>
       </div>
 
       {/* end  */}
@@ -67,4 +61,4 @@ function Lamps() {
   );
 }
 
-export default Lamps;
+export default LampsCard;

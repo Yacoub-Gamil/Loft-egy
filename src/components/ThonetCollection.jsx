@@ -50,9 +50,7 @@ function ThonetCollection() {
           />
         </div>
         <div className=" flex justify-center mt-[1rem]">
-          <Button>
-            discover more
-          </Button>
+          <Button to="/thonet-chairs">discover more</Button>
         </div>
       </div>
     </div>

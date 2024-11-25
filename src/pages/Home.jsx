@@ -3,7 +3,7 @@ import gsap from "gsap";
 import HeroSlider from "../components/HeroSlider";
 import CardItem from "../components/CardItem";
 import ThonetCollection from "../components/ThonetCollection";
-import Lamps from "../components/Lamps";
+import LampsCard from "../components/LampsCard";
 
 function Home() {
   useGSAP(() => {
@@ -75,19 +75,21 @@ function Home() {
 
       <div className="  gap-[6rem] w-[90rem] mx-auto grid grid-cols-2 mt-[-6rem]">
         <CardItem
-          title="mirrors"
+          title="modern furniture"
           image="mirror.jpg"
           info="helods from the daybed in our gallery"
           price="52"
+          to="/modern-furniture"
         />
         <CardItem
-          title="chairs"
+          title="chairs & more"
           image="chair.jpg"
           info="helods from the daybed in our gallery"
           price="52"
+          to="/thonet-chairs"
         />
       </div>
-      <Lamps />
+      <LampsCard />
     </div>
   );
 }

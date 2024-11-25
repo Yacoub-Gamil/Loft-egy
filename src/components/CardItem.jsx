@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import Button from "./Button";
 import gsap from "gsap";
 
-function CardItem({ title, image, info }) {
+function CardItem({ title, image, info, to }) {
   useGSAP(() => {
     gsap.fromTo(
       "#card",
@@ -25,9 +25,7 @@ function CardItem({ title, image, info }) {
             {info}
           </p>
 
-          <Button >
-            find more
-          </Button>
+          <Button to={to}>find more</Button>
         </div>
       </div>
     </div>

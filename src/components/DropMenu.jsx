@@ -4,8 +4,9 @@ import { NavLink } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-function DrobMenu() {
+function DropMenu() {
   const [showMenu, setShowMenu] = useState(false);
+
   useGSAP(() => {
     gsap.fromTo(
       "#menu",
@@ -25,10 +26,13 @@ function DrobMenu() {
       onClick={() => {
         setShowMenu((show) => !show);
       }}
-      className="  relative "
+      className="  relative  capitalize "
     >
       <div className=" flex items-center">
-        <span id="category" className="cursor-pointer">
+        <span
+          id="category"
+          className=" uppercase hover:scale-105 duration-300 cursor-pointer"
+        >
           category
         </span>
         {!showMenu ? (
@@ -44,6 +48,12 @@ function DrobMenu() {
             <ul className=" px-[1rem] w-[12rem] flex flex-col gap-[1rem]">
               <NavLink
                 className=" hover:scale-110 duration-300 "
+                to="/collections"
+              >
+                Collections
+              </NavLink>
+              <NavLink
+                className=" hover:scale-110 duration-300 "
                 to="/thonet-chairs"
               >
                 thonet chairs
@@ -57,12 +67,7 @@ function DrobMenu() {
               <NavLink className=" hover:scale-110 duration-300 " to="/trays">
                 trays
               </NavLink>
-              <NavLink
-                className=" hover:scale-110 duration-300 "
-                to="/collections"
-              >
-                Collections
-              </NavLink>
+
               <NavLink className=" hover:scale-110 duration-300 " to="/lamps">
                 lamps
               </NavLink>
@@ -74,4 +79,4 @@ function DrobMenu() {
   );
 }
 
-export default DrobMenu;
+export default DropMenu;

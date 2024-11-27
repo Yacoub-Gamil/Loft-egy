@@ -5,4 +5,8 @@ async function getThonet() {
   return data;
 }
 
-export { getThonet };
+async function getTrays() {
+  const { data } = await supabase.from("trays").select();
+  return data;
+}
+export { getThonet, getTrays };

@@ -1,9 +1,12 @@
 import { CiHeart, CiShoppingCart } from "react-icons/ci";
 import { IoInformation } from "react-icons/io5";
 
-function ItemsCard({ name, price, image, descrption }) {
+function ItemsCard({ name, price, image, descrption, id }) {
   return (
-    <div className=" shadow-[0px_0px_20px_0px_#718096] border rounded-md">
+    <div
+      id={id}
+      className=" opacity-0 shadow-[0px_0px_20px_0px_#718096] border rounded-md"
+    >
       <div className=" bg-white rounded-md flex flex-col items-center p-2">
         <div className=" relative flex">
           <div className=" absolute right-[-1.9rem] top-[8rem] flex flex-col gap-2 ">

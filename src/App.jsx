@@ -12,31 +12,34 @@ import ModernFurniture from "./pages/ModernFurniture";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import CartPage from "./pages/CartPage";
+import ContextAllProvider from "./context/contextAll";
 
 function App() {
   const queryClient = new QueryClient();
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
-      <BrowserRouter>
-        <Routes>
-          <Route element={<AppLayout />}>
-            <Route index element={<Navigate replace to="/home" />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/trays" element={<Trays />} />
-            <Route path="/thonet-chairs" element={<ThonetChairs />} />
-            <Route path="/modern-furniture" element={<ModernFurniture />} />
-            <Route path="/lamps" element={<Lamps />} />
-            <Route path="/collections" element={<Collections />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/spotlight" element={<Spotlight />} />
-            <Route path="/cart" element={<CartPage />} />
-            <Route path="/contact" element={<Contact />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </QueryClientProvider>
+    <ContextAllProvider>
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryDevtools initialIsOpen={false} />
+        <BrowserRouter>
+          <Routes>
+            <Route element={<AppLayout />}>
+              <Route index element={<Navigate replace to="/home" />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/trays" element={<Trays />} />
+              <Route path="/thonet-chairs" element={<ThonetChairs />} />
+              <Route path="/modern-furniture" element={<ModernFurniture />} />
+              <Route path="/lamps" element={<Lamps />} />
+              <Route path="/collections" element={<Collections />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/spotlight" element={<Spotlight />} />
+              <Route path="/cart" element={<CartPage />} />
+              <Route path="/contact" element={<Contact />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </QueryClientProvider>
+    </ContextAllProvider>
   );
 }
 

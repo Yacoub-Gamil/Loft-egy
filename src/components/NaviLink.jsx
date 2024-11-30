@@ -14,6 +14,9 @@ function NaviLink() {
       <NavLink className=" hover:scale-105 duration-300" to="/contact">
         Contact
       </NavLink>
+      <NavLink to="/about" className=" hover:scale-105 duration-300">
+        About us
+      </NavLink>
     </div>
   );
 }

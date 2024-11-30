@@ -45,7 +45,7 @@ function Home() {
           />
         </div>
 
-        <div id="slider">
+        <div id="slider" className="">
           <HeroSlider />
         </div>
       </div>
@@ -68,6 +68,7 @@ function Home() {
           image="trays/t-2.jpg"
           info="helods from the daybed in our gallery"
           price="52"
+          to="/trays"
         />
       </div>
 

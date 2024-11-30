@@ -17,23 +17,18 @@ function Header() {
     <>
       <div id="header" className=" sticky top-0 left-0 z-50 border-b">
         <div className=" bg-[#f1f5f9] w-full flex justify-between items-center rounded-b-md text-[#52525b]">
-          <div className="mx-[4rem] ">
+          <div className="mx-[4rem] sm:mx-[1rem] ">
             <img className="h-[5rem]" src="loft/loft-logo.png" alt="" />
           </div>
 
-          <NaviLink />
-
-          <div className=" mx-[4rem]">
-            <NavLink
-              to="/about"
-              className=" font-serif tracking-wide duration-150 uppercase  hover:border-b border-[#dc2626]  p-2 rounded-md"
-            >
-              About us
-            </NavLink>
+          <div>
+            <NaviLink />
+          </div>
+          
+          <div>
+            <Cart />
           </div>
         </div>
-
-        <Cart />
       </div>
     </>
   );

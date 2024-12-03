@@ -1,9 +1,9 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import HeroSlider from "../components/HeroSlider";
-import CardItem from "../components/CardItem";
-import ThonetCollection from "../components/ThonetCollection";
-import LampsCard from "../components/LampsCard";
+import CardItemHome from "../features/home/CardItemHome";
+import ThonetCollection from "../features/home/ThonetCollection";
+import Slider from "../features/home/Slider";
+import LampsCollection from "../features/home/LampsCollection";
 
 function Home() {
   useGSAP(() => {
@@ -17,7 +17,7 @@ function Home() {
         opacity: 1,
         y: 0,
         delay: 1.4,
-        duration: 1,
+        duration: 0.4,
       }
     );
     gsap.fromTo(
@@ -46,24 +46,24 @@ function Home() {
         </div>
 
         <div id="slider" className="">
-          <HeroSlider />
+          <Slider />
         </div>
       </div>
 
-      <div className=" w-full mx-auto gap-[4rem] grid grid-cols-3 mt-[-10rem]">
-        <CardItem
+      <div className=" w-[80rem] mx-auto gap-[5rem] grid grid-cols-3 mt-[-10rem]">
+        <CardItemHome
           title="daybed"
           image="daybed.jpg"
           info="helods from the daybed in our gallery"
           price="52"
         />
-        <CardItem
+        <CardItemHome
           title="bookshelf"
           image="bookshelf.jpg"
           info="helods from the daybed in our gallery "
           price="52"
         />
-        <CardItem
+        <CardItemHome
           title="trays"
           image="trays/t-2.jpg"
           info="helods from the daybed in our gallery"
@@ -74,15 +74,15 @@ function Home() {
 
       <ThonetCollection />
 
-      <div className="  gap-[6rem] w-[90rem] mx-auto grid grid-cols-2 mt-[-6rem]">
-        <CardItem
+      <div className=" w-[80rem] gap-[6rem]  mx-auto grid grid-cols-2 mt-[-6rem]">
+        <CardItemHome
           title="modern furniture"
           image="mirror.jpg"
           info="helods from the daybed in our gallery"
           price="52"
           to="/modern-furniture"
         />
-        <CardItem
+        <CardItemHome
           title="chairs & more"
           image="chair.jpg"
           info="helods from the daybed in our gallery"
@@ -90,7 +90,8 @@ function Home() {
           to="/thonet-chairs"
         />
       </div>
-      <LampsCard />
+
+      <LampsCollection />
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import { useGSAP } from "@gsap/react";
-import OurTeam from "../components/OurTeam";
-import TitiCard from "../components/TitiCard";
+
 import gsap from "gsap";
+import TitiCard from "./TitiCard";
+import OurTeam from "./OurTeam";
 
 function About() {
   useGSAP(() => {
@@ -14,9 +15,9 @@ function About() {
   return (
     <div id="aboutUs">
       {/* 1 */}
-      <div className=" w-full flex mb-[2rem] font-serif">
+      <div className=" w-[80rem] mx-auto flex mb-[2rem] font-serif">
         <div className="w-full">
-          <h1 className=" font-bold text-[2rem]  mb-[1.4rem] text-[#52525b]">
+          <h1 className=" font-bold text-[2rem] mt-[1.4rem] mb-[.5rem] text-[#52525b]">
             The loft gallery
           </h1>
           <p className=" text-[1.2rem] mx-[2rem]">
@@ -37,16 +38,16 @@ function About() {
           </p>
         </div>
         <div className=" w-full rounded-sm grid grid-cols-3  mt-[2.2rem] p-2 place-content-center gap-[2px]">
-          <img  src="loft/bg-1.jpg" alt="" />
-          <img  src="loft/bg-2.jpg" alt="" />
-          <img  src="loft/bg-3.jpg" alt="" />
-          <img  src="loft/bg-4.jpg" alt="" />
-          <img  src="loft/bg-5.jpg" alt="" />
+          <img src="loft/bg-1.jpg" alt="" />
+          <img src="loft/bg-2.jpg" alt="" />
+          <img src="loft/bg-3.jpg" alt="" />
+          <img src="loft/bg-4.jpg" alt="" />
+          <img src="loft/bg-5.jpg" alt="" />
           <img className=" h-full" src="loft/bg-6.jpg" alt="" />
         </div>
       </div>
       {/* 2 */}
-      <div className=" w-full flex justify-between mb-[2rem]">
+      <div className=" w-[80rem] mx-auto flex justify-between mb-[2rem]">
         <div className=" w-full">
           <img
             className="mx-[2rem] rounded-sm h-[25rem] w-[30rem]"
@@ -55,7 +56,7 @@ function About() {
           />
         </div>
         <div className=" w-full font-serif">
-          <h1 className=" font-bold text-[2rem] mb-[1.4rem] text-[#52525b] ">
+          <h1 className=" font-bold text-[2rem] mb-[.5rem] text-[#52525b] ">
             Hani Gamil
           </h1>
           <p className=" text-[1.2rem] mx-[2rem]">

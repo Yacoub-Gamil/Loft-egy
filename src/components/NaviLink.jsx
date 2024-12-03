@@ -1,22 +1,48 @@
 import { NavLink } from "react-router-dom";
 import DropMenu from "./DropMenu";
+import { useContextAll } from "../context/contextAll";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { IoPersonOutline } from "react-icons/io5";
 
 function NaviLink() {
+  const { items } = useContextAll();
+
   return (
-    <div className=" mt-[2rem] uppercase  flex text-[1rem] font-serif tracking-wide gap-[2rem]">
-      <NavLink className=" hover:scale-105 duration-300" to="/home">
-        Home
-      </NavLink>
-      <DropMenu />
-      <NavLink className=" hover:scale-105 duration-300" to="/spotlight">
-        Spotlight
-      </NavLink>
-      <NavLink className=" hover:scale-105 duration-300" to="/contact">
-        Contact
-      </NavLink>
-      <NavLink to="/about" className=" hover:scale-105 duration-300">
-        About us
-      </NavLink>
+    <div className=" w-full  mt-[2rem] uppercase flex  justify-center text-[1rem] font-serif tracking-wide gap-[6rem]">
+      <div className=" flex gap-[2rem]">
+        <NavLink className=" hover:scale-105 duration-300" to="/home">
+          Home
+        </NavLink>
+
+        <DropMenu />
+
+        <NavLink className=" hover:scale-105 duration-300" to="/spotlight">
+          Spotlight
+        </NavLink>
+        <NavLink className=" hover:scale-105 duration-300" to="/contact">
+          Contact
+        </NavLink>
+        <NavLink to="/about" className=" hover:scale-105 duration-300">
+          About us
+        </NavLink>
+      </div>
+
+      <div className=" text-[1.2rem] mt-[-2rem] flex items-center gap-4 ">
+        <NavLink to="/cart" className="flex items-center ">
+          {items.length <= 0 ? (
+            <span className="mt-[-1rem] mx-[] w-[5px] rounded-full h-[5px] bg-[#ffd28d]"></span>
+          ) : (
+            <span className=" mt-[-1.4rem] text-[1rem] bg-[#ffd28d] w-[1.4rem] h-[1.4rem] flex justify-center items-center rounded-full ">
+              {items.length}
+            </span>
+          )}
+          <HiOutlineShoppingBag className="" />
+        </NavLink>
+
+        <NavLink to="/account" className="flex ">
+          <IoPersonOutline />
+        </NavLink>
+      </div>
     </div>
   );
 }

@@ -1,20 +1,19 @@
 import { useQuery } from "@tanstack/react-query";
-import { getStore } from "../api/apiService";
+
+import ItemsCard from "../components/ItemsCard";
+import { PuffLoader } from "react-spinners";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { PuffLoader } from "react-spinners";
-import ItemsCard from "../components/ItemsCard";
+import { getStore } from "../api/apiService";
 
-const ModernFurniture = () => {
+const Thonet = () => {
   const { data, isLoading } = useQuery({
-    queryKey: ["modren"],
+    queryKey: ["thonet"],
     queryFn: getStore,
   });
 
-  // to get just the modern furniture from the data base
-  const modernFurniture = data?.filter(
-    (modren) => modren.category === "modernFurniture"
-  );
+  // to get just the thonet from the data base
+  const thonet = data?.filter((tray) => tray.category === "thonet");
 
   // useGSAP(() => {
   //   gsap.to("#itemCard", {
@@ -36,8 +35,8 @@ const ModernFurniture = () => {
     </div>
   ) : (
     <div className="">
-      <div className=" w-[80rem] mx-auto grid gap-6 grid-cols-3 mt-[2rem] mb-[2rem]">
-        {modernFurniture.map((item) => (
+      <div className=" w-[80rem] grid gap-4 grid-cols-3 mt-[2rem] mx-auto mb-[2rem]">
+        {thonet.map((item) => (
           <ItemsCard
             key={item.id}
             id={item.id}
@@ -53,4 +52,4 @@ const ModernFurniture = () => {
   );
 };
 
-export default ModernFurniture;
+export default Thonet;

@@ -1,18 +1,21 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Spotlight from "./pages/Spotlight";
+import Contact from "./features/contact/Contact";
+import Spotlight from "./features/spotLight/Spotlight";
 import Trays from "./pages/Trays";
-import ThonetChairs from "./pages/ThonetChairs";
+import Thonet from "./pages/Thonet";
 import Lamps from "./pages/Lamps";
 import Collections from "./pages/collections";
 import ModernFurniture from "./pages/ModernFurniture";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import CartPage from "./pages/CartPage";
 import ContextAllProvider from "./context/contextAll";
+import ScrollToTop from "./helper/ScrollToTop";
+import ItemInfo from "./components/ItemInfo";
+import About from "./features/about/About";
+import CartOverview from "./features/cart/CartOverview";
 
 function App() {
   const queryClient = new QueryClient();
@@ -22,20 +25,22 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route element={<AppLayout />}>
               <Route index element={<Navigate replace to="/home" />} />
               <Route path="/home" element={<Home />} />
               <Route path="/trays" element={<Trays />} />
-              <Route path="/thonet-chairs" element={<ThonetChairs />} />
+              <Route path="/thonet-chairs" element={<Thonet />} />
               <Route path="/modern-furniture" element={<ModernFurniture />} />
               <Route path="/lamps" element={<Lamps />} />
               <Route path="/collections" element={<Collections />} />
               <Route path="/about" element={<About />} />
               <Route path="/spotlight" element={<Spotlight />} />
-              <Route path="/cart" element={<CartPage />} />
               <Route path="/contact" element={<Contact />} />
             </Route>
+            <Route path="/cart" element={<CartOverview />} />
+            <Route path="/item-info" element={<ItemInfo />} />
           </Routes>
         </BrowserRouter>
       </QueryClientProvider>

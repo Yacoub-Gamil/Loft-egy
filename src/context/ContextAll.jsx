@@ -8,6 +8,13 @@ function reducer(state, action) {
   switch (action.type) {
     case "addItemToCart":
       return [...state, action.payload];
+    case "removeFromCart":
+      console.log(action.payload);
+      return [...state.filter((el) => el.id !== action.payload)];
+
+    case "clearCart":
+      console.log("clear");
+      return initialState;
 
     default:
       break;
@@ -16,9 +23,11 @@ function reducer(state, action) {
 
 function ContextAllProvider({ children }) {
   const [items, dispatch] = useReducer(reducer, initialState);
+  const getTotalPrice = items.map((item) => item.price);
+  const totalPrice = getTotalPrice.reduce((acc, cur) => acc + cur, 0);
 
   return (
-    <ContextAll.Provider value={{ items, dispatch }}>
+    <ContextAll.Provider value={{ items, dispatch, totalPrice }}>
       {children}
     </ContextAll.Provider>
   );

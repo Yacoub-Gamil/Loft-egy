@@ -43,7 +43,7 @@ function DropMenu() {
         {showMenu && (
           <div
             id="menu"
-            className={`border rounded-md p-4 absolute top-10 bg-[#f1f5f9]`}
+            className={`border rounded-md p-4 absolute top-10 bg-white`}
           >
             <ul className=" px-[1rem] w-[12rem] flex flex-col gap-[1rem]">
               <NavLink
@@ -56,7 +56,7 @@ function DropMenu() {
                 className=" hover:scale-110 duration-300 "
                 to="/thonet-chairs"
               >
-                thonet chairs
+                thonet
               </NavLink>
               <NavLink
                 className=" hover:scale-110 duration-300 "

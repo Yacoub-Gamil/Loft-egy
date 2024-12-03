@@ -1,26 +1,17 @@
 import { supabase } from "./supabase";
 
-async function getThonet() {
-  const { data } = await supabase.from("thonet").select();
+async function getStore() {
+  const { data } = await supabase.from("store").select();
   return data;
 }
 
-async function getThonetById(id) {
-  const { data, error } = await supabase
-    .from("thonet")
-    .select("*")
-    .eq("id", id);
-  return data;
-}
+// async function getThonetById(id) {
+//   const { data, error } = await supabase
+//     .from("thonet")
+//     .select("*")
+//     .eq("id", id);
 
-async function getTrays() {
-  const { data } = await supabase.from("trays").select();
-  return data;
-}
+//   return data;
+// }
 
-async function getModren() {
-  const { data } = await supabase.from("modernFurniture").select();
-  return data;
-}
-
-export { getThonet, getThonetById, getTrays, getModren };
+export { getStore };

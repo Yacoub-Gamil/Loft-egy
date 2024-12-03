@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../../ui/Button";
 
 const pipeLamps = [
   "lamps/pipe/pipe-1.png",
@@ -7,22 +7,26 @@ const pipeLamps = [
   "lamps/pipe/pipe-4.png",
   "lamps/pipe/pipe-5.png",
   "lamps/pipe/pipe-8.png",
-  "lamps/pipe/pipe-7.png",
+  "lamps/pipe/pipe-9.png",
 ];
 
 const egyptionLamps = [
-  "lamps/egyption/01-.png",
-  "lamps/egyption/02-.png",
-  "lamps/egyption/03-.png",
-  "lamps/egyption/04-.png",
-  "lamps/egyption/05-.png",
-  "lamps/egyption/06-.png",
+  "lamps/egyption/01-.jpg",
+  "lamps/egyption/02-.jpg",
+  "lamps/egyption/03-.jpg",
+  "lamps/egyption/04-.jpg",
+  "lamps/egyption/05-.jpg",
+  "lamps/egyption/06-.jpg",
+  "lamps/egyption/07-.jpg",
+  "lamps/egyption/08-.jpg",
+  "lamps/egyption/09-.jpg",
+  "lamps/egyption/10-.jpg",
 ];
 
-function LampsCard() {
+function LampsCollection() {
   return (
     <div className=" flex flex-col items-center mt-[6rem]">
-      <h1 className=" mb-[2rem] font-sevillana tracking-wide text-[3rem] italic text-[#52525b] font-semibold border-b">
+      <h1 className=" mb-[2rem] font-sevillana tracking-wide text-[2.4rem] italic text-[#52525b] font-semibold ">
         Our production lamps
       </h1>
       {/* start */}
@@ -30,7 +34,7 @@ function LampsCard() {
         {pipeLamps.map((img) => (
           <div key={img}>
             <img
-              className=" cursor-pointer duration-300 hover:scale-110 w-full h-[13rem]"
+              className=" cursor-pointer duration-300 hover:scale-110 w-[7rem] h-[8rem]"
               src={img}
               alt=""
             />
@@ -41,11 +45,11 @@ function LampsCard() {
       {/* end */}
 
       {/* start */}
-      <div className=" grid grid-cols-6 gap-6 p-8">
+      <div className=" w-[70rem] grid grid-cols-5 gap-2">
         {egyptionLamps.map((img) => (
           <div key={img}>
             <img
-              className=" cursor-pointer duration-300 hover:scale-110 h-[15rem]"
+              className=" rounded-md cursor-pointer duration-300 hover:scale-110 w-full h-[12rem]"
               src={img}
               alt="lamp"
             />
@@ -61,4 +65,4 @@ function LampsCard() {
   );
 }
 
-export default LampsCard;
+export default LampsCollection;

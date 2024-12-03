@@ -11,6 +11,11 @@ function CartHeader() {
           <span className=" font-bold ">{items.length} Items</span> in your bag.
         </h3>
       </div>
+      <div className="flex justify-end mb-[1rem]">
+        <button className=" border px-1 py-1 rounded-full font-serif bg-white hover:bg-black hover:text-white duration-300">
+          Clear cart
+        </button>
+      </div>
     </div>
   );
 }

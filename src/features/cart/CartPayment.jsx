@@ -32,7 +32,7 @@ function CartPayment() {
             </button>
           </div>
         </div>
-        <div className=" mt-[1rem] flex justify-evenly ">
+        {/* <div className=" mt-[1rem] flex justify-evenly ">
           <button
             onClick={() => {
               dispatch({ type: "clearCart" });
@@ -47,7 +47,7 @@ function CartPayment() {
           >
             Go back
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

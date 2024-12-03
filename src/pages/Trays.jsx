@@ -34,7 +34,7 @@ const Trays = () => {
     </div>
   ) : (
     <div className="">
-      <div className=" w-[75rem] mx-auto grid gap-4 grid-cols-3 mt-[2rem] mb-[2rem]">
+      <div className=" w-[80rem] mx-auto grid gap-4 grid-cols-4 mt-[2rem] mb-[2rem]">
         {trays.map((item) => (
           <ItemsCard
             key={item.id}

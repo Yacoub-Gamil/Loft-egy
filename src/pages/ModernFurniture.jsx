@@ -36,7 +36,7 @@ const ModernFurniture = () => {
     </div>
   ) : (
     <div className="">
-      <div className=" w-[80rem] mx-auto grid gap-6 grid-cols-3 mt-[2rem] mb-[2rem]">
+      <div className=" w-[80rem] mx-auto grid gap-6 grid-cols-4 mt-[2rem] mb-[2rem]">
         {modernFurniture.map((item) => (
           <ItemsCard
             key={item.id}

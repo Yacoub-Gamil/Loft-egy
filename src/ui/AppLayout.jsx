@@ -6,9 +6,10 @@ function AppLayout() {
   return (
     <>
       <Header />
-      <div className=" container m-auto">
+      <div className=" container m-auto ">
         <Outlet />
       </div>
+
       <Footer />
     </>
   );

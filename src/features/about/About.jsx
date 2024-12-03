@@ -18,7 +18,7 @@ function About() {
       <div className=" w-[80rem] mx-auto flex mb-[2rem] font-serif">
         <div className="w-full">
           <h1 className=" font-bold text-[2rem] mt-[1.4rem] mb-[.5rem] text-[#52525b]">
-            The loft gallery
+            loft gallery
           </h1>
           <p className=" text-[1.2rem] mx-[2rem]">
             THE LOFT gallery is located in the smart Zamalek district of Cairo.

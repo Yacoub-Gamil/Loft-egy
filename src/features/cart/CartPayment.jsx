@@ -3,15 +3,15 @@ import { useContextAll } from "../../context/contextAll";
 import { IoArrowUndoSharp } from "react-icons/io5";
 
 function CartPayment() {
-  const { dispatch, totalPrice } = useContextAll();
+  const { totalPrice } = useContextAll();
   const navigate = useNavigate();
 
   function handleGoBack() {
     navigate(-1);
   }
   return (
-    <div className=" w-[20rem] h-[16rem]">
-      <div className=" fixed border-[2px] bg-white mt-[7.8rem] ">
+    <div className=" sticky top-1 w-[20rem] h-[16rem]">
+      <div className="  border-[2px] top-1 bg-white mt-[7.8rem] ">
         <div className="w-[20rem]">
           <div className=" flex flex-col gap-4">
             <h1 className=" font-bold m-[1rem] border-b">Cart Total</h1>

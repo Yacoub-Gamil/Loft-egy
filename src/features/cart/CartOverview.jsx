@@ -1,6 +1,5 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Header from "../../ui/Header";
 import { useContextAll } from "../../context/contextAll";
 import CartItem from "./CartItem";
 import EmptyCart from "./EmptyCart";
@@ -25,8 +24,6 @@ function CartOverview() {
 
   return (
     <>
-      <Header />
-
       {items.length <= 0 ? (
         <EmptyCart />
       ) : (
@@ -51,7 +48,7 @@ function CartOverview() {
               {/* -End here- */}
               {items.map((item) => (
                 <CartItem
-                  key={item.name}
+                  key={item.id}
                   id={item.id}
                   htmlId="item"
                   name={item.name}

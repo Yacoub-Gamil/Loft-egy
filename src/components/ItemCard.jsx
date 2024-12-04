@@ -1,5 +1,6 @@
 import { IoInformation } from "react-icons/io5";
 import { useContextAll } from "../context/contextAll";
+import { Link } from "react-router-dom";
 
 function ItemCard({ id, name, price, image, description, quantity, htmlId }) {
   const { dispatch } = useContextAll();
@@ -9,9 +10,12 @@ function ItemCard({ id, name, price, image, description, quantity, htmlId }) {
       id={htmlId}
       className=" opacity-0 flex flex-col items-center shadow-[0px_0px_10px_0px_#00000024] bg-white  justify-center border rounded-sm"
     >
-      <div className="w-full mt-[1rem] relative cursor-pointer  ">
+      <Link
+        to={`/item-info/${id}`}
+        className="w-full mt-[1rem] relative cursor-pointer "
+      >
         <IoInformation className=" text-[1.5rem] rounded-full absolute  right-6 border-b  border-b-[#52525b]  justify-end" />
-      </div>
+      </Link>
       <div className=" w-full flex justify-center ">
         <img
           className=" hover:scale-105 duration-300 h-[12rem]"

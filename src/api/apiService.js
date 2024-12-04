@@ -5,13 +5,9 @@ async function getStore() {
   return data;
 }
 
-// async function getThonetById(id) {
-//   const { data, error } = await supabase
-//     .from("thonet")
-//     .select("*")
-//     .eq("id", id);
+async function getItemById(id) {
+  const { data } = await supabase.from("store").select("*").eq("id", id);
+  return data;
+}
 
-//   return data;
-// }
-
-export { getStore };
+export { getStore, getItemById };

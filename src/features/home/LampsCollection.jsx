@@ -29,6 +29,7 @@ function LampsCollection() {
       <h1 className=" mb-[2rem] font-sevillana tracking-wide text-[2.4rem] italic text-[#52525b] font-semibold ">
         Our production lamps
       </h1>
+
       {/* start */}
       <div className=" grid grid-cols-7 justify-center place-items-center mb-[5rem] ">
         {pipeLamps.map((img) => (
@@ -41,7 +42,6 @@ function LampsCollection() {
           </div>
         ))}
       </div>
-
       {/* end */}
 
       {/* start */}
@@ -49,7 +49,7 @@ function LampsCollection() {
         {egyptionLamps.map((img) => (
           <div key={img}>
             <img
-              className=" rounded-md cursor-pointer duration-300 hover:scale-110 w-full h-[12rem]"
+              className=" rounded-sm cursor-pointer duration-300 hover:scale-110 w-full h-[12rem]"
               src={img}
               alt="lamp"
             />
@@ -59,7 +59,6 @@ function LampsCollection() {
       <div className=" flex justify-center m-[3rem]">
         <Button to="/lamps">discover more</Button>
       </div>
-
       {/* end  */}
     </div>
   );

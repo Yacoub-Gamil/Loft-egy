@@ -13,7 +13,7 @@ import Collections from "./pages/collections";
 import ModernFurniture from "./pages/ModernFurniture";
 import ContextAllProvider from "./context/contextAll";
 import ScrollToTop from "./helper/ScrollToTop";
-import ItemInfo from "./components/ItemInfo";
+import ItemInfo from "./pages/ItemInfo";
 import About from "./features/about/About";
 import CartOverview from "./features/cart/CartOverview";
 
@@ -38,9 +38,9 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/spotlight" element={<Spotlight />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/item-info/:itemId" element={<ItemInfo />} />
+              <Route path="/cart" element={<CartOverview />} />
             </Route>
-            <Route path="/cart" element={<CartOverview />} />
-            <Route path="/item-info" element={<ItemInfo />} />
           </Routes>
         </BrowserRouter>
       </QueryClientProvider>

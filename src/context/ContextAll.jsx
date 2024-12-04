@@ -9,7 +9,6 @@ function reducer(state, action) {
     case "addItemToCart":
       return [...state, action.payload];
     case "removeFromCart":
-      console.log(action.payload);
       return [...state.filter((el) => el.id !== action.payload)];
 
     case "clearCart":

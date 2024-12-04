@@ -1,10 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-
-import ItemsCard from "../components/ItemsCard";
 import { PuffLoader } from "react-spinners";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { getStore } from "../api/apiService";
+import ItemCard from "../components/ItemCard";
 
 const Thonet = () => {
   const { data, isLoading } = useQuery({
@@ -19,7 +18,7 @@ const Thonet = () => {
     gsap.to("#itemCard", {
       ease: "power1.inOut",
       opacity: 1,
-      duration: 0.2,
+      duration: 0.3,
       stagger: {
         amount: 1,
         grid: [1, 1],
@@ -27,6 +26,7 @@ const Thonet = () => {
         y: -8,
       },
     });
+    // you have to put isLoading in gsap
   }, [isLoading]);
 
   return isLoading ? (
@@ -34,21 +34,19 @@ const Thonet = () => {
       <PuffLoader color="#ff0000" size={150} />
     </div>
   ) : (
-    <div className="">
-      <div className=" w-[80rem] grid gap-4 grid-cols-4 mt-[2rem] mx-auto mb-[2rem]">
-        {thonet.map((item) => (
-          <ItemsCard
-            key={item.id}
-            // htmlId="itemCard"
-            id={item.id}
-            name={item.name}
-            image={item.image}
-            price={item.price}
-            description={item.description}
-            quantity={item.quantity}
-          />
-        ))}
-      </div>
+    <div className=" w-[80rem] grid gap-4 grid-cols-4 mt-[2rem] mx-auto mb-[2rem]">
+      {thonet.map((item) => (
+        <ItemCard
+          key={item.id}
+          htmlId="itemCard"
+          id={item.id}
+          name={item.name}
+          image={item.image}
+          price={item.price}
+          description={item.description}
+          quantity={item.quantity}
+        />
+      ))}
     </div>
   );
 };

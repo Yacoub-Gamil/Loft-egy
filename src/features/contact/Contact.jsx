@@ -18,7 +18,7 @@ function Contact() {
       </div>
 
       <div className="w-full bg-cover h-[35rem] bg-[url('loft/bg-4.jpg')] bg-no-repeat flex flex-col  justify-center items-center">
-        <div className=" w-[50%] p-4 bg-opacity-80 bg-slate-50 flex  flex-col gap-8 items-center shadow-[0px_0px_20px_5px_#e2e8f0]">
+        <div className=" w-[50%] p-4 bg-opacity-70 bg-slate-50 flex  flex-col gap-8 items-center">
           <h1 className=" text-[2rem] font-semibold italic">
             Questions or Comments?
           </h1>

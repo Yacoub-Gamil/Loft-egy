@@ -30,12 +30,15 @@ function CartOverview() {
       {items.length <= 0 ? (
         <EmptyCart />
       ) : (
-        <div className=" w-[80rem] m-auto grid p-4 grid-cols-[1fr_auto]">
+        <div
+          id="items"
+          className=" w-[80rem] m-auto grid p-4 grid-cols-[1fr_auto]"
+        >
           <div className="p-9">
             <CartHeader />
-            <div className=" bg-white p-4 rounded-2xl borde-b">
+            <div className=" bg-white p-4 rounded-sm  border-[2px]">
               {/* the header for the itmes  -Start here- */}
-              <div className="flex justify-between font-bold">
+              <div className="flex justify-between p-4 mb-[1rem] font-bold">
                 <div>
                   <h1>Product</h1>
                 </div>
@@ -50,6 +53,7 @@ function CartOverview() {
                 <CartItem
                   key={item.name}
                   id={item.id}
+                  htmlId="item"
                   name={item.name}
                   price={item.price}
                   image={item.image}

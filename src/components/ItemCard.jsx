@@ -1,16 +1,16 @@
 import { IoInformation } from "react-icons/io5";
 import { useContextAll } from "../context/contextAll";
 
-function ItemsCard({ id, name, price, image, description, quantity, htmlId }) {
+function ItemCard({ id, name, price, image, description, quantity, htmlId }) {
   const { dispatch } = useContextAll();
 
   return (
     <div
-      id="htmlId"
-      className="flex flex-col items-center shadow-[0px_0px_10px_0px_#00000024] bg-white  justify-center border rounded-sm"
+      id={htmlId}
+      className=" opacity-0 flex flex-col items-center shadow-[0px_0px_10px_0px_#00000024] bg-white  justify-center border rounded-sm"
     >
-      <div className="w-full mt-[1rem] relative cursor-pointer ">
-        <IoInformation className=" text-[1.5rem] rounded-full absolute  right-6 border border-b-[#52525b]   justify-end" />
+      <div className="w-full mt-[1rem] relative cursor-pointer  ">
+        <IoInformation className=" text-[1.5rem] rounded-full absolute  right-6 border-b  border-b-[#52525b]  justify-end" />
       </div>
       <div className=" w-full flex justify-center ">
         <img
@@ -50,4 +50,4 @@ function ItemsCard({ id, name, price, image, description, quantity, htmlId }) {
   );
 }
 
-export default ItemsCard;
+export default ItemCard;

@@ -16,7 +16,7 @@ function EmptyCart() {
       { opacity: 1, y: 0, duration: 0.5, delay: 1 }
     );
   }, []);
-  
+
   return (
     <div className=" w-full h-[80vh] flex justify-center items-center">
       <div
@@ -24,9 +24,7 @@ function EmptyCart() {
         className=" bg-white w-[50rem] flex justify-center border border-[#ffd28d] items-center rounded-2xl h-[15rem] p-4"
       >
         <div className=" ">
-          <p className="text-[1.8rem] font-serif italic">
-            Your cart is empty 😊
-          </p>
+          <p className="text-[1.8rem] font-serif">Your cart is empty 😊</p>
           <div className="flex justify-center">
             <NavLink
               to="/"

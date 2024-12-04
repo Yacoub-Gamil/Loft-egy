@@ -1,19 +1,25 @@
+import { IoIosClose } from "react-icons/io";
 import { useContextAll } from "../../context/contextAll";
 
 function CartHeader() {
-  const { items } = useContextAll();
+  const { items, dispatch } = useContextAll();
 
   return (
     <div>
       <div className=" mb-[2rem] ">
         <h1 className=" font-bold text-[1.4rem]">Shopping Bag</h1>
         <h3 className=" text-[1rem] mx-[1rem]">
-          <span className=" font-bold ">{items.length} Items</span> in your bag.
+          <span className=" font-bold text-red-600">{items.length} Items</span>{" "}
+          in your bag.
         </h3>
       </div>
-      <div className="flex justify-end mb-[1rem]">
-        <button className=" border px-1 py-1 rounded-full font-serif bg-white hover:bg-black hover:text-white duration-300">
-          Clear cart
+      <div className=" flex justify-end m-[1rem]">
+        <button
+          onClick={() => dispatch({ type: "clearCart" })}
+          className="flex items-center text-[.8rem] hover:border-b border-b duration-300 text-red-600 uppercase"
+        >
+          <IoIosClose className=" text-[1.3rem]" />
+          <span>Clear cart</span>
         </button>
       </div>
     </div>

@@ -12,7 +12,6 @@ function reducer(state, action) {
       return [...state.filter((el) => el.id !== action.payload)];
 
     case "clearCart":
-      console.log("clear");
       return initialState;
 
     default:

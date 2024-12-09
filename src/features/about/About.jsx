@@ -15,12 +15,12 @@ function About() {
   return (
     <div id="aboutUs">
       {/* 1 */}
-      <div className=" w-[80rem] mx-auto flex mb-[2rem] font-serif">
+      <div className=" xl:w-[80rem] mx-auto xl:flex mb-[2rem] font-serif">
         <div className="w-full">
-          <h1 className=" font-bold text-[2rem] mt-[1.4rem] mb-[.5rem] text-[#52525b]">
+          <h1 className=" font-bold xs:mx-1 xl:text-[2rem] mt-[1.4rem] mb-[.5rem] text-[#52525b]">
             loft gallery
           </h1>
-          <p className=" text-[1.2rem] mx-[2rem]">
+          <p className=" xl:text-[1.2rem] xs:text-[.8rem]  mx-[2rem]">
             THE LOFT gallery is located in the smart Zamalek district of Cairo.
             The owner, Hani Gamil, opened the Gallery in November 2002 in a
             large apartment of a charming 30&apos;s house. As soon as you enter
@@ -37,29 +37,29 @@ function About() {
             together in harmony
           </p>
         </div>
-        <div className=" w-full rounded-sm grid grid-cols-3  mt-[2.2rem] p-2 place-content-center gap-[2px]">
+        <div className=" xl:w-full rounded-sm grid grid-cols-3  mt-[2.2rem] p-2 place-content-center gap-[2px]">
           <img src="loft/bg-1.jpg" alt="" />
           <img src="loft/bg-2.jpg" alt="" />
           <img src="loft/bg-3.jpg" alt="" />
           <img src="loft/bg-4.jpg" alt="" />
           <img src="loft/bg-5.jpg" alt="" />
-          <img className=" h-full" src="loft/bg-6.jpg" alt="" />
+          <img className=" xl:h-full xs:h-[4.7rem] sm:h-[7.2rem]" src="loft/bg-6.jpg" alt="" />
         </div>
       </div>
       {/* 2 */}
-      <div className=" w-[80rem] mx-auto flex justify-between mb-[2rem]">
+      <div className=" xl:w-[80rem] mx-auto xl:flex justify-between mb-[2rem]">
         <div className=" w-full">
           <img
-            className="mx-[2rem] rounded-sm h-[25rem] w-[30rem]"
+            className="xl:mx-[2rem] xs:h-[18rem] xs:mx-2 sm:mx-auto xl:h-[25rem] xl:w-[30rem] rounded-sm"
             src="loft/hani.jpg"
             alt=""
           />
         </div>
         <div className=" w-full font-serif">
-          <h1 className=" font-bold text-[2rem] mb-[.5rem] text-[#52525b] ">
+          <h1 className=" xs:mx-1 xl:text-[2rem] font-bold  mb-[.5rem] text-[#52525b] ">
             Hani Gamil
           </h1>
-          <p className=" text-[1.2rem] mx-[2rem]">
+          <p className=" xl:text-[1.2rem] xs:text-[.8rem] mx-[2rem]">
             The owner, Hani Gamil, is a young decorator originating from Upper
             Egypt. He is a &quot;self-made&quot; man who learnt his trade
             &quot;on the job&quot; in the Egyptian capital Cairo. In spite of

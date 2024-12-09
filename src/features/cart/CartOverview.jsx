@@ -29,17 +29,17 @@ function CartOverview() {
       ) : (
         <div
           id="items"
-          className=" w-[80rem] m-auto grid p-4 grid-cols-[1fr_auto]"
+          className=" xl:w-[80rem] xs:w-[22rem] sm:w-[28rem]  m-auto grid xl:p-4 xl:grid-cols-[1fr_auto]"
         >
           <div className="p-9">
             <CartHeader />
-            <div className=" bg-white p-4 rounded-sm  border-[2px]">
+            <div className=" bg-white xl:p-4 rounded-sm xs:mx-[-1rem]  border-[2px]">
               {/* the header for the itmes  -Start here- */}
               <div className="flex justify-between p-4 mb-[1rem] font-bold">
-                <div>
+                <div className="xl:text-[1rem] xs:text-[.8rem]">
                   <h1>Product</h1>
                 </div>
-                <div className=" flex w-[50%] justify-between ">
+                <div className=" flex xl:w-[50%] sm:gap-10 xl:text-[1rem] xs:gap-2 text-[.6rem] xl:justify-between ">
                   <h1>Price</h1>
                   <h1>Quantity</h1>
                   <h1>Total Price</h1>

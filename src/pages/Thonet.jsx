@@ -34,7 +34,7 @@ const Thonet = () => {
       <PuffLoader color="#ff0000" size={150} />
     </div>
   ) : (
-    <div className=" w-[80rem] grid gap-4 grid-cols-4 mt-[2rem] mx-auto mb-[2rem]">
+    <div className=" xl:w-[80rem] w-[20rem] grid gap-4 xs:grid-cols-1 xl:grid-cols-4 mt-[2rem] mx-auto mb-[2rem]">
       {thonet.map((item) => (
         <ItemCard
           key={item.id}

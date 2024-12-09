@@ -5,7 +5,7 @@ function Button({ to, target, children }) {
     <Link
       to={to}
       target={target ? "blank" : null}
-      className=" text-[.8rem] font-semibold hover:scale-105 hover:bg-black bg-white hover:text-white duration-300 uppercase px-[1.4rem] py-[.5rem] rounded-full shadow-[0px_0px_10px_5px_#d5d5d7]"
+      className="  xs:text-[.6rem] md:text-[.8rem] font-semibold hover:scale-105 hover:bg-black bg-white hover:text-white duration-300 uppercase px-[1.4rem] py-[.5rem] rounded-full shadow-[0px_0px_10px_5px_#d5d5d7]"
     >
       {children}
     </Link>

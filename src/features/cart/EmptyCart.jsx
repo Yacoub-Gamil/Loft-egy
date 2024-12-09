@@ -18,17 +18,19 @@ function EmptyCart() {
   }, []);
 
   return (
-    <div className=" w-full h-[80vh] flex justify-center items-center">
+    <div className=" xl:w-full h-[80vh] flex justify-center items-center">
       <div
         id="empty"
-        className=" bg-white w-[50rem] flex justify-center border border-[#ffd28d] items-center rounded-2xl h-[15rem] p-4"
+        className=" bg-white xl:w-[50rem] sx:w-[20rem] sx:h-[10rem] xl:h-[15rem] flex justify-center border border-[#ffd28d] items-center rounded-2xl  p-4"
       >
         <div className=" ">
-          <p className="text-[1.8rem] font-serif">Your cart is empty 😊</p>
+          <p className="xl:text-[1.8rem] xs:text-[1rem] font-serif">
+            Your cart is empty 😊
+          </p>
           <div className="flex justify-center">
             <NavLink
               to="/"
-              className="bg-black italic text-[#ffd28d] hover:scale-105 duration-300 border px-4 py-1 rounded-md mt-[1rem]  text-center text-[1.4rem] flex items-center gap-6"
+              className="bg-black italic text-[#ffd28d] hover:scale-105 duration-300 border px-4 py-1 rounded-md mt-[1rem] text-center sx:text-[.8rem] xl:text-[1.4rem] flex items-center gap-6"
             >
               <h1>Go fill it </h1>
               <FaTruckArrowRight id="car" />

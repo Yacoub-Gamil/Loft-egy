@@ -12,31 +12,37 @@ function Contact() {
     );
   }, []);
   return (
-    <div id="contact" className="w-[80rem] mx-auto flex items-center flex-col">
+    <div
+      id="contact"
+      className=" xl:w-[80rem] xs:w-[21rem] sm:w-[30rem] mx-auto flex items-center flex-col"
+    >
       <div>
-        <img className=" w-[18rem]" src="loft/loft-logo.png" alt="" />
+        <img
+          className=" xl:w-[18rem] xs:w-[12rem]"
+          src="loft/loft-logo.png"
+          alt=""
+        />
       </div>
 
-      <div className="w-full bg-cover h-[35rem] bg-[url('loft/bg-4.jpg')] bg-no-repeat flex flex-col  justify-center items-center">
-        <div className=" w-[50%] p-4 bg-opacity-70 bg-slate-50 flex  flex-col gap-8 items-center">
-          <h1 className=" text-[2rem] font-semibold italic">
-            Questions or Comments?
+      <div className="w-full bg-cover  xl:h-[35rem] xs:h-[20rem] bg-[url('loft/bg-4.jpg')] bg-no-repeat flex flex-col justify-center items-center">
+        <div className=" xl:w-[50%] xs:w-[80%] xs:p-2 xl:p-4 bg-opacity-70 bg-slate-50 flex  flex-col xs:gap-2 xl:gap-8 items-center">
+          <h1 className=" xl:text-[2rem] xs:text-[1rem] font-semibold italic">
+            Still better, visit us in person!
           </h1>
-          <p className=" text-[1.4rem] text-[#52525b] text-center font-semibold italic">
-            Feel free to send us a message. We are available for commissions as
-            well as for shows. We love to hear what viewers think of our work.
-            We look forward to hearing from you.
+          <p className=" xl:text-[1.4rem] text-[#52525b] text-center font-semibold italic">
+            We love our customers, so feel free to visit us. 12 Sayed El-Bakry,
+            Mohammed Mazhar, Zamalek, Cairo Governorate, Égypte
           </p>
           <button className=" border font-bold text-[#52525b] tracking-[0.2rem] hover:text-white duration-300 hover:bg-[#dc2626] border-[#52525b] hover:border-[#dc2626] py-2 px-4 uppercase text-[1rem]">
             get in touch!
           </button>
         </div>
       </div>
-      <div className=" mt-[4rem] text-center">
-        <h1 className=" font-serif tracking-wide text-[1.4rem]  italic text-[#52525b] font-semibold border-t">
+      <div className=" xl:m-[4rem] xs:m-[1rem] text-center">
+        <h1 className=" font-serif tracking-wide xs:text-[.8rem] xl:text-[1.4rem]  italic text-[#52525b] font-semibold">
           Connect With Us! We are on Facebook & Instagram & More
         </h1>
-        <div className=" grid grid-cols-2 mt-[2rem] gap-[1.2rem] place-items-center">
+        {/* <div className=" grid grid-cols-2 mt-[2rem] gap-[1.2rem] place-items-center">
           <div className="  h-full flex flex-col gap-[2rem] uppercase justify-center">
             <div>
               <h1 className="  text-[#52525b] text-[1.8rem]  italic font-serif font-semibold mb-[.4rem]">
@@ -87,7 +93,7 @@ function Contact() {
               loading="lazy"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -33,40 +33,27 @@ function Home() {
 
   return (
     <div className="container">
-      <div className="relative z-20">
-        <div
-          id="logo"
-          className=" absolute z-40 left-[44%] top-[5%] mt-[-1.6rem] bg-slate-50 opacity-80 shadow-[0px_0px_20px_5px_#f1f5f9] "
-        >
-          <img
-            className="h-[10rem] w-[15rem] z-45"
-            src="loft/loft-logo.png"
-            alt=""
-          />
-        </div>
-
-        <div id="slider" className="">
-          <Slider />
-        </div>
+      <div id="slider" className="">
+        <Slider />
       </div>
 
-      <div className=" w-[80rem] mx-auto gap-[5rem] grid grid-cols-3 mt-[-10rem]">
+      <div className="xl:w-[70rem] xs:w-[21rem] sm:w-[25rem] xs:gap-4 xl:gap-[6rem] mx-auto grid xl:grid-cols-3 xs:mt-[-18rem] xl:mt-[-10rem]">
         <CardItemHome
           title="daybed"
           image="daybed.jpg"
-          info="helods from the daybed in our gallery"
+          info=" daybed in our gallery"
           price="52"
         />
         <CardItemHome
           title="bookshelf"
           image="bookshelf.jpg"
-          info="helods from the daybed in our gallery "
+          info="bookshelf in our gallery "
           price="52"
         />
         <CardItemHome
           title="trays"
           image="trays/t-2.jpg"
-          info="helods from the daybed in our gallery"
+          info="trays in our gallery"
           price="52"
           to="/trays"
         />
@@ -74,18 +61,18 @@ function Home() {
 
       <ThonetCollection />
 
-      <div className=" w-[80rem] gap-[6rem]  mx-auto grid grid-cols-2 mt-[-6rem]">
+      <div className=" xl:w-[70rem] xs:w-[21rem] sm:w-[25rem] xs:gap-4 xl:gap-[6rem]  mx-auto grid xl:grid-cols-2 xs:mt-[-6rem]">
         <CardItemHome
           title="modern furniture"
           image="mirror.jpg"
-          info="helods from the daybed in our gallery"
+          info="modern-furniture in our gallery"
           price="52"
           to="/modern-furniture"
         />
         <CardItemHome
           title="chairs & more"
           image="chair.jpg"
-          info="helods from the daybed in our gallery"
+          info="thonet in our gallery"
           price="52"
           to="/thonet-chairs"
         />

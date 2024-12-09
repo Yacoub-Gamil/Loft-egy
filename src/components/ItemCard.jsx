@@ -8,7 +8,7 @@ function ItemCard({ id, name, price, image, description, quantity, htmlId }) {
   return (
     <div
       id={htmlId}
-      className=" opacity-0 flex flex-col items-center shadow-[0px_0px_10px_0px_#00000024] bg-white  justify-center border rounded-sm"
+      className=" opacity-0 flex flex-col items-center shadow-[0px_0px_10px_0px_#00000024] bg-white justify-center border rounded-sm"
     >
       <Link
         to={`/item-info/${id}`}

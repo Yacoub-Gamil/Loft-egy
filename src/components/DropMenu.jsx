@@ -26,7 +26,7 @@ function DropMenu() {
       onClick={() => {
         setShowMenu((show) => !show);
       }}
-      className="  relative  capitalize "
+      className="  relative capitalize "
     >
       <div className=" flex items-center">
         <span
@@ -36,21 +36,27 @@ function DropMenu() {
           category
         </span>
         {!showMenu ? (
-          <MdOutlineArrowDropDown className=" text-[1.5rem]" />
+          <MdOutlineArrowDropDown className=" md:text-[1.5rem]" />
         ) : (
-          <MdOutlineArrowDropUp className=" text-[1.5rem]" />
+          <MdOutlineArrowDropUp className=" md:text-[1.5rem]" />
         )}
         {showMenu && (
           <div
             id="menu"
-            className={`border rounded-md p-4 absolute top-10 bg-white`}
+            className={`border rounded-md p-4 absolute xs:top-4 xl:top-10 bg-white`}
           >
-            <ul className=" px-[1rem] w-[12rem] flex flex-col gap-[1rem]">
+            <ul className=" px-[1rem] xs:w-[7.4rem] xl:w-[12rem] flex flex-col gap-[1rem]">
               <NavLink
                 className=" hover:scale-110 duration-300 "
                 to="/collections"
               >
                 Collections
+              </NavLink>
+              <NavLink
+                className=" hover:scale-105 duration-300"
+                to="/spotlight"
+              >
+                Spotlight
               </NavLink>
               <NavLink
                 className=" hover:scale-110 duration-300 "
